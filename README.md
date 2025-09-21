@@ -1,4 +1,4 @@
-# Acoustic Customer Journey Demo - TypeScript
+# Acoustic Customer Journey Prototype - TypeScript
 
 A Kafka-powered customer engagement automation system built with TypeScript, demonstrating automated customer journey workflows.
 
