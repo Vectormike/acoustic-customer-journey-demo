@@ -1,0 +1,55 @@
+{
+  "name": "acoustic-customer-journey-demo",
+  "version": "1.0.0",
+  "description": "Customer Journey Workflow Demo - A Kafka-powered customer engagement automation system",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "dev:watch": "nodemon --exec ts-node src/app.ts",
+    "setup": "ts-node src/utils/setup.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "kafka:start": "./scripts/kafka.sh start",
+    "kafka:stop": "./scripts/kafka.sh stop",
+    "kafka:restart": "./scripts/kafka.sh restart",
+    "kafka:logs": "./scripts/kafka.sh logs",
+    "kafka:status": "./scripts/kafka.sh status",
+    "kafka:cleanup": "./scripts/kafka.sh cleanup",
+    "dev:full": "npm run kafka:start && npm run dev"
+  },
+  "keywords": [
+    "customer-journey",
+    "workflow",
+    "kafka",
+    "marketing-automation",
+    "acoustic",
+    "personalization"
+  ],
+  "author": "Victor Jonah",
+  "license": "MIT",
+  "dependencies": {
+    "@types/joi": "^17.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.1",
+    "kafkajs": "^2.2.4",
+    "morgan": "^1.10.1",
+    "uuid": "^13.0.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.10.5",
+    "@types/uuid": "^9.0.7",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
